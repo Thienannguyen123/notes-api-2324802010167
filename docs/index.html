@@ -1,0 +1,252 @@
+
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bài 1 - Hello Cloud | TDMU</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: #f1f5f9;
+            color: #1e293b;
+            line-height: 1.6;
+            margin: 0;
+            padding: 30px 15px;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+        }
+
+        header {
+            background: #1e40af;
+            color: white;
+            padding: 30px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        header h1 {
+            margin-top: 0;
+        }
+
+        section {
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            margin-bottom: 25px;
+        }
+
+        h2 {
+            color: #1e40af;
+            border-bottom: 2px solid #dbeafe;
+            padding-bottom: 10px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+        }
+
+        th, td {
+            border: 1px solid #cbd5e1;
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #dbeafe;
+        }
+
+        tr:nth-child(even) {
+            background: #f8fafc;
+        }
+
+        .nist-item {
+            border-left: 4px solid #2563eb;
+            padding: 10px 15px;
+            margin: 15px 0;
+            background: #eff6ff;
+        }
+
+        .cost {
+            color: #15803d;
+            font-weight: bold;
+        }
+
+        footer {
+            text-align: center;
+            color: #64748b;
+            padding: 20px;
+        }
+
+        @media (max-width: 600px) {
+            body {
+                padding: 12px 8px;
+            }
+
+            section {
+                padding: 15px;
+            }
+
+            table {
+                font-size: 13px;
+            }
+
+            th, td {
+                padding: 8px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="container">
+
+    <header>
+        <h1>BÀI 1 - HELLO CLOUD</h1>
+        <p>Lập trình trên máy ảo đám mây đầu tiên</p>
+        <p>Học phần: Điện toán đám mây</p>
+        <p>MSSV: 2324802010167</p>
+        <p>Repository: notes-api-2324802010167</p>
+    </header>
+
+    <section>
+        <h2>1. Bảng so sánh môi trường</h2>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Tiêu chí</th>
+                    <th>Máy cá nhân</th>
+                    <th>Codespace</th>
+                </tr>
+            </thead>
+
+            <tbody>
+                <tr>
+                    <td>Thời gian chuẩn bị đến khi chạy node -v</td>
+                    <td>5 phút</td>
+                    <td>10 phút 5 giây</td>
+                </tr>
+
+                <tr>
+                    <td>Số CPU</td>
+                    <td>12 logical processors</td>
+                    <td>2 CPU</td>
+                </tr>
+
+                <tr>
+                    <td>RAM</td>
+                    <td>16 GB</td>
+                    <td>7.8 GB</td>
+                </tr>
+
+                <tr>
+                    <td>Hệ điều hành</td>
+                    <td>Windows 11</td>
+                    <td>Linux 6.8.0-1064-azure</td>
+                </tr>
+
+                <tr>
+                    <td>Truy cập từ thiết bị khác</td>
+                    <td>Cần cấu hình mạng hoặc dịch vụ chia sẻ</td>
+                    <td>Truy cập qua URL HTTPS của Codespaces</td>
+                </tr>
+
+                <tr>
+                    <td>Chi phí, đo bằng gì</td>
+                    <td>Điện năng và chi phí phần cứng</td>
+                    <td>Core-hours và GB-tháng lưu trữ</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h3>Thông tin Billing Usage</h3>
+        <p>Consumed usage: 0.03 USD</p>
+        <p>Discounts: 0.03 USD</p>
+        <p class="cost">Total billable usage: 0 USD</p>
+
+        <p>
+            GitHub ghi nhận mức tiêu thụ tài nguyên 0.03 USD,
+            được giảm trừ toàn bộ 0.03 USD nên chi phí phải thanh toán
+            tại thời điểm kiểm tra là 0 USD.
+        </p>
+    </section>
+
+    <section>
+        <h2>2. Năm đặc tính điện toán đám mây NIST</h2>
+
+        <div class="nist-item">
+            <h3>1. On-demand self-service</h3>
+            <p>
+                Người dùng có thể tự tạo môi trường Codespace thông qua
+                GitHub mà không cần yêu cầu quản trị viên cấp máy chủ.
+            </p>
+        </div>
+
+        <div class="nist-item">
+            <h3>2. Broad network access</h3>
+            <p>
+                API Hello Cloud được truy cập qua URL HTTPS từ máy tính
+                và điện thoại sau khi cấu hình Port Visibility thành Public.
+            </p>
+        </div>
+
+        <div class="nist-item">
+            <h3>3. Resource pooling</h3>
+            <p>
+                GitHub sử dụng hạ tầng tài nguyên dùng chung để cung cấp
+                môi trường máy ảo cho nhiều người dùng khác nhau.
+            </p>
+        </div>
+
+        <div class="nist-item">
+            <h3>4. Rapid elasticity</h3>
+            <p>
+                Người dùng có thể khởi tạo, dừng và khởi chạy lại Codespace.
+                Cấu hình tài nguyên có thể được lựa chọn hoặc điều chỉnh
+                theo nhu cầu sử dụng.
+            </p>
+        </div>
+
+        <div class="nist-item">
+            <h3>5. Measured service</h3>
+            <p>
+                GitHub theo dõi mức sử dụng tài nguyên thông qua Billing Usage,
+                bao gồm compute usage tính bằng core-hours và dung lượng lưu trữ.
+            </p>
+        </div>
+    </section>
+
+    <section>
+        <h2>3. Kết luận</h2>
+        <p>
+            Qua bài thực hành, em đã tạo thành công môi trường lập trình
+            trên GitHub Codespaces, xây dựng API Hello Cloud bằng Node.js
+            và Express, đồng thời truy cập API từ thiết bị di động thông qua
+            Internet.
+        </p>
+
+        <p>
+            Bài thực hành giúp em nhận diện năm đặc tính của điện toán đám mây
+            theo NIST, hiểu cách đo lường tài nguyên và phân biệt môi trường
+            lập trình trên máy cá nhân với môi trường trên nền tảng đám mây.
+        </p>
+    </section>
+
+    <footer>
+        Bài thực hành 1 - Điện toán đám mây | TDMU | 2026
+    </footer>
+
+</div>
+</body>
+</html>
