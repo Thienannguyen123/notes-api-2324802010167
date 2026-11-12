@@ -181,35 +181,42 @@
                 <tr>
                     <td>0</td>
                     <td>Cấu hình gốc</td>
-                    <td>2s</td>
+                    <td>20s</td>
                 </tr>
 
                 <tr>
                     <td>1</td>
                     <td>Nhân đôi VMS</td>
-                    <td>2.5s</td>
+                    <td>20s</td>
                 </tr>
 
                 <tr>
                     <td>2</td>
                     <td>Nhân đôi CLOUDLETS</td>
-                    <td>2.35s</td>
+                    <td>20s</td>
                 </tr>
 
                 <tr>
                     <td>3</td>
                     <td>SpaceShared</td>
-                    <td>2.7s</td>
+                    <td>40.3s</td>
                 </tr>
             </tbody>
         </table>
 
         <div class="nist-item">
-            <h3>Phân tích chính sách lập lịch (Time-shared vs. Space-shared)</h3>
-            <p>
-                Ở lần chạy thứ 3 khi chuyển sang chính sách <strong>SpaceShared</strong>, các tác vụ (Cloudlets) được cấp phát độc quyền tài nguyên xử lý theo thứ tự; các tác vụ đến sau phải chờ trong hàng đợi nên thời điểm hoàn thành cuối cùng kéo dài lên <strong>2.7s</strong>.
-            </p>
-        </div>
+    <h3>Phân tích chính sách lập lịch (Time-shared vs. Space-shared)</h3>
+    <p>
+        Ở lần chạy thứ 3 khi chuyển sang chính sách
+        <strong>SpaceShared</strong>, 4 Cloudlet đầu tiên được cấp phát
+        CPU và chạy trước, hoàn thành tại 20.1 giây.
+        4 Cloudlet còn lại phải chờ trong hàng đợi cho đến khi
+        tài nguyên được giải phóng, sau đó mới tiếp tục thực thi
+        và hoàn thành tại 40.3 giây.
+        Vì vậy, tổng thời điểm hoàn thành của toàn bộ tác vụ
+        tăng từ 20 giây lên 40.3 giây.
+    </p>
+</div>
     </section>
 
     <section>
